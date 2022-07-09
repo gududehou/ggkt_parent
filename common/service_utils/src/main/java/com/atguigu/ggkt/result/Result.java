@@ -56,20 +56,19 @@ public class Result<T> {
         return build(null, 200, message);
     }
 
-    public static <T> Result<T> fail() {
-        return Result.fail(null);
-    }
 
-    /**
-     * 操作失败
-     *
-     * @param data
-     * @param <T>
-     * @return
-     */
     public static <T> Result<T> fail(T data) {
         return build(data, 201, "失败");
     }
+
+    public static <T> Result<T> fail(T data, String message) {
+        return build(data, 201, message);
+    }
+
+    public static <T> Result<T> fail(String message) {
+        return build(null, 201, message);
+    }
+
 
     public Result<T> message(String msg) {
         this.setMessage(msg);
