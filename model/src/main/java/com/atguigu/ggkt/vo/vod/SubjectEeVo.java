@@ -24,7 +24,5 @@ public class SubjectEeVo {
 
 	@ExcelProperty(value = "排序" ,index = 3)
 	private Integer sort;
-
-
 }
 
