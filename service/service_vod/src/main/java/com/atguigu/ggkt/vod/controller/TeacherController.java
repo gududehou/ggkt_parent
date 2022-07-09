@@ -33,7 +33,7 @@ public class TeacherController {
     private TeacherService teacherService;
 
     @ApiOperation("逻辑删除讲师")
-    @DeleteMapping("{id}")
+    @DeleteMapping("remove/{id}")
     public Result removeById(@ApiParam(name = "id", value = "ID", required = true) @PathVariable Long id) {
         teacherService.removeById(id);
         return Result.ok("删除讲师成功");
