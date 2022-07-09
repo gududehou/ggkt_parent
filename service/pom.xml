@@ -14,6 +14,7 @@
     <artifactId>service</artifactId>
     <modules>
         <module>service_vod</module>
+        <module>service_cos</module>
     </modules>
 
     <properties>
